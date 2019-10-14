@@ -1,8 +1,9 @@
 <h1>Hello</h1>
+
 <form action="{% url 'index' %}" method="POST">
 	{% csrf_token %}
 	<input type="text" name="txt1">
-	<input type="text" name="txt2">
+	<input type="text" name="txt2"><br>
 	<input type="submit" name="Submit">
 	<input type="text" name="result" value={{ sum }}>
 </form>
