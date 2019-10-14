@@ -1,9 +1,12 @@
-<h1>Hello</h1>
+<h1>Calculater</h1>
 
 <form action="{% url 'index' %}" method="POST">
 	{% csrf_token %}
-	<input type="text" name="txt1">
-	<input type="text" name="txt2"><br>
-	<input type="submit" name="Submit">
-	<input type="text" name="result" value={{ sum }}>
+	<label for="">Enter the First Number : &emsp;&emsp;</label><input type="text" name="txt1" required><br><br>
+	<label for="">Enter the Second Number : &emsp;</label><input type="text" name="txt2" required><br><br><br>
+	<input type="submit" name="add" value="Addition">
+	<input type="submit" name="sub" value="Subtration">
+	<input type="submit" name="mul" value="Multiplication">
+	<input type="submit" name="div" value="Division"><br><br>
+	<label for="">Result : &emsp;&emsp;</label><input type="text" name="result" value={{ sum }}>
 </form>
